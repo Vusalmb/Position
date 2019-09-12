@@ -1,0 +1,41 @@
+.h-title {
+  color: blue;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.h-title::after {
+  content: " ";
+  display: inline-block;
+  height: 3px;
+  background-color: black;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -20px;
+}
+
+.h-title::before {
+  content: " ";
+  display: inline-block;
+  height: 3px;
+  position: absolute;
+  background-color: red;
+  width: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px;
+  z-index: 1;
+  transition-property: all;
+  transition-duration: 2s;
+
+}
+.h-title:hover::before {
+  width: 200px;
+  transition-property: all;
+  transition-duration: 2s;
+}
